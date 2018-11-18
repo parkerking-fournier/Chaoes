@@ -1,0 +1,3 @@
+[submodule "finised_attractors"]
+	path = finised_attractors
+	url = https://github.com/parkerking-fournier/Chaos
