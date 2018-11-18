@@ -1,3 +1,6 @@
 [submodule "finised_attractors"]
 	path = finised_attractors
 	url = https://github.com/parkerking-fournier/Chaos/finished_attractors
+[submodule "Chaos"]
+	path = Chaos
+	url = https://github.com/parkerking-fournier/Chaos
