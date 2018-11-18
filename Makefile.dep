@@ -1,0 +1,33 @@
+attractor_functions.o: attractor_functions.cc attractor_functions.h \
+  ../../../mve/libs/math/vector.h ../../../mve/libs/math/defines.h \
+  ../../../mve/libs/math/algo.h
+attractors.o: attractors.cc attractor_functions.h \
+  ../../../mve/libs/math/vector.h ../../../mve/libs/math/defines.h \
+  ../../../mve/libs/math/algo.h kingfournier_attractor.h \
+  curve_generator.h triangulator.h ../../../mve/libs/mve/mesh.h \
+  ../../../mve/libs/mve/defines.h ../../../mve/libs/util/arguments.h \
+  ../../../mve/libs/util/strings.h ../../../mve/libs/util/defines.h \
+  ../../../mve/libs/util/exception.h \
+  ../../../mve/libs/util/file_system.h ../../../mve/libs/util/system.h
+curve_generator.o: curve_generator.cc curve_generator.h \
+  ../../../mve/libs/math/vector.h ../../../mve/libs/math/defines.h \
+  ../../../mve/libs/math/algo.h attractor_functions.h \
+  kingfournier_attractor.h ../../../mve/libs/mve/mesh_io_ply.h \
+  ../../../mve/libs/util/system.h ../../../mve/libs/util/defines.h \
+  ../../../mve/libs/mve/defines.h ../../../mve/libs/mve/image.h \
+  ../../../mve/libs/math/functions.h ../../../mve/libs/math/matrix.h \
+  ../../../mve/libs/mve/image_base.h ../../../mve/libs/util/strings.h \
+  ../../../mve/libs/mve/camera.h ../../../mve/libs/mve/view.h \
+  ../../../mve/libs/mve/mesh.h
+kingfournier_attractor.o: kingfournier_attractor.cc \
+  kingfournier_attractor.h ../../../mve/libs/math/vector.h \
+  ../../../mve/libs/math/defines.h ../../../mve/libs/math/algo.h
+triangulator.o: triangulator.cc triangulator.h \
+  ../../../mve/libs/math/vector.h ../../../mve/libs/math/defines.h \
+  ../../../mve/libs/math/algo.h ../../../mve/libs/mve/mesh.h \
+  ../../../mve/libs/mve/defines.h ../../../mve/libs/mve/mesh_io_ply.h \
+  ../../../mve/libs/util/system.h ../../../mve/libs/util/defines.h \
+  ../../../mve/libs/mve/image.h ../../../mve/libs/math/functions.h \
+  ../../../mve/libs/math/matrix.h ../../../mve/libs/mve/image_base.h \
+  ../../../mve/libs/util/strings.h ../../../mve/libs/mve/camera.h \
+  ../../../mve/libs/mve/view.h
