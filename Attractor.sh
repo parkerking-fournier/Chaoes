@@ -3,7 +3,7 @@
 start='0.5000'
 end='0.5002'
 step='0.00001'
-LENGTH=11
+LENGTH=12
 
 for i in `seq 0 $LENGTH`;
  do
