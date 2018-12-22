@@ -1,18 +1,24 @@
 #!/bin/bash
 
-start='0.5000'
-end='0.5002'
+start='0.50057'
+end='0.50077'
 step='0.00001'
-LENGTH=12
+LENGTH=720
 
-for i in `seq 0 $LENGTH`;
+echo ""
+
+for i in `seq 57 $LENGTH`;
  do
-         VAR='-f king_fournier -s -i 38500 -t 0.002 -o '$start' -e '$end' -w 0.00002 attractors/finished/attractor_frame_ply_files/frame_'$i'.ply'
-         ./attractors/src/attractors $VAR
+         VAR='-f king_fournier -s -i 38500 -t 0.002 -o '$start' -e '$end' -w 0.00002 finished_attractors/attractor_frame_ply_files/frame_'$i'.ply'
+         ./attractors $VAR
+         echo "	Done."
          
-         VAR=' attractors/src/ply2obj.py attractors/finished/attractor_frame_ply_files/frame_'$i'.ply attractors/finished/attractor_frame_obj_files/frame_'$i'.obj'
+         echo "Writing obj file $i"
+         VAR=' ply2obj.py finished_attractors/attractor_frame_ply_files/frame_'$i'.ply finished_attractors/attractor_frame_obj_files/frame_'$i'.obj'
          python $VAR 
+         echo "	Done."
         
+         echo ""
          start=`echo "$start + $step" | bc`
          end=`echo "$end + $step" | bc`
  done
